@@ -1,0 +1,270 @@
+/* Reset bazik */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: rgba(237, 237, 241, 0.945);
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 123, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  align-items: center;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.navbar .logo {
+  font-size: 28px;
+  color: #0c5db9;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #2777d3;
+  font-weight: 600;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  color: #004a99;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* lartësia e navbar-it */
+  background: transparent;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+ 
+/* Hero Section */
+/*.hero {
+  height: 90vh;
+  background: url('image/WhatsApp Image 2025-05-23 at 19.37.09_3258f905.jpg') center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}*/
+
+/* Sherbimet */
+.sherbimet {
+  padding: 70px 30px 100px;
+  background: #f0f7ff;
+  text-align: center;
+}
+
+.sherbimet h2 {
+  font-size: 2.8rem;
+  color: #007BFF;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.sherbime-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.sherbim {
+  background: white;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.sherbim:hover {
+  transform: translateY(-10px);
+}
+
+.sherbim img {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.sherbim h3 {
+  color: #007BFF;
+  margin: 20px 0 12px;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.sherbim p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  background: #007BFF;
+  color: white;
+  padding: 40px 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid white;
+  padding-bottom: 6px;
+  font-weight: 700;
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+.footer-logo {
+  width: 140px;
+  margin: 10px 0 20px;
+}
+
+/* Map & Lokacionet */
+.map-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.map-links a {
+  background: white;
+  color: #007BFF;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.map-links a:hover {
+  background: #004a99;
+  color: white;
+}
+
+.map-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive 
+@media (max-width: 880px) {
+  .sherbime-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+}
+*/
+@media screen and (max-width: 768px) {
+  /* Menu horizontale bëhet vertikale */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Layout fleksibël bëhet kolonë */
+  .main {
+    flex-direction: column;
+  }
+
+  .content, .sidebar {
+    width: 100%;
+  }
+
+  /* Tekst dhe padding më të vogla për pajisje më të vogla */
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  header, footer {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rreth Nesh - Elektroshtepiake 24</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Elektroshtepiake 24</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produkte.html">Produkte</a></li>
+      <li><a href="sisteme.html">Sisteme</a></li>
+      <li><a href="dyqanet.html">Dyqanet</a></li>
+      <li><a href="rrethnesh.html" class="active">Rreth Nesh</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section style="padding: 80px 30px 120px; max-width: 900px; margin: 0 auto; text-align: center;">
+  <h2 style="color:#007BFF; font-size:2.8rem; margin-bottom: 40px;">Historiku Ynë</h2>
+  <p style="margin-bottom: 40px; font-size: 1.2rem; color: #333;">
+    Elektroshtepiake 24 ka filluar aktivitetin që në vitin 2005 dhe prej atëherë ka ofruar shërbim të
+    cilësisë më të lartë për klientët e saj në mbarë Shqipërinë.
+  </p>
+
+  <div class="slider-container">
+    <div class="slider">
+      <img class="slide" src="images/hist1.jpg" alt="Historik 1" />
+      <img class="slide" src="images/hist2.jpg" alt="Historik 2" />
+      <img class="slide" src="images/hist3.jpg" alt="Historik 3" />
+    </div>
+    <div class="dots">
+      <span class="dot active" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+</section>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>
+
+<style>
+  .slider-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .slider img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  .dots {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .dot {
+    height: 14px;
+    width: 14px;
+    margin: 0 7px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .dot.active,
+  .dot:hover {
+    background-color: #007BFF;
+  }
+</style>
+
+</body>
+</html>

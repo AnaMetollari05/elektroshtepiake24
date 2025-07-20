@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elektroshtepiake 24</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Elektroshtepiake 24</div>
+    <nav>
+      <ul>
+        <li><a href="produkte.html">Produkte</a></li>
+        <li><a href="sisteme.html">Sisteme</a></li>
+        <li><a href="dyqanet.html">Dyqanet</a></li>
+        <li><a href="rrethnesh.html">Rreth Nesh</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+     <img src="image/WhatsApp Image 2025-05-23 at 19.37.09_3258f905.jpg" alt="Foto Kryesore" />
+  </section>
+
+  <!-- Sherbimet -->
+  <section class="sherbimet" id="sherbimet">
+    <h2>Shërbimet Tona</h2>
+    <div class="sherbime-container">
+      <div class="sherbim">
+        <img src="image/25ec1aa9f75d0d30ab9ae73e032d84fd.jpg" alt="Sisteme Kondicionimi" />
+        <h3>Sisteme Kondicionimi</h3>
+        <p>Instalim dhe mirëmbajtje për sisteme moderne ajrimi</p>
+      </div>
+      <div class="sherbim">
+        <img src="image/076d1cc60071bb0e9640954160589e36.jpg" alt="Elektroshtepiake" />
+        <h3>Elektroshtepiake</h3>
+        <p>Gama e plotë e pajisjeve shtëpiake nga markat më të mira</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3><i class="fas fa-plug"></i> Elektroshtepiake 24</h3>
+        <img src="image/WhatsApp Image 2025-05-23 at 19.41.26_a4e4986e.jpg" alt="Logo" class="footer-logo" />
+        <p> Elektroshtepiake 24 & Airbio.al </p>
+        <p>Designed & built entirely by Ana Metollari</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Kontakt</h3>
+        <p><i class="fas fa-phone"></i> +355 69 722 4580</p>
+        <p><i class="fas fa-envelope"></i> bicprendi.elvion@yahoo.com</p>
+        <p><i class="fas fa-clock"></i> 24/7 Shërbim</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Lokacionet</h3>
+        <div class="map-links">
+          <a href="#map-tirane" onclick="showMap('tirane')">Tiranë</a>
+          <a href="#map-tropoje" onclick="showMap('tropoje')">Tropojë</a>
+        </div>
+        <div id="map-tirane" class="map-container">
+          <iframe src="https://maps.google.com/maps?q=Tirane&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+            frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div id="map-tropoje" class="map-container" style="display:none;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2948.3181076699425!2d20.072129084064777!3d42.3570594610296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDIxJzI1LjQiTiAyMMKwMDQnMzcuMiJF!5e0!3m2!1sen!2s!4v1750328409743!5m2!1sen!2s" 
+            frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function showMap(city) {
+    document.getElementById('map-tirane').style.display = 'none';
+    document.getElementById('map-tropoje').style.display = 'none';
+    if(city === 'tirane') {
+      document.getElementById('map-tirane').style.display = 'block';
+    } else {
+      document.getElementById('map-tropoje').style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
